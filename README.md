@@ -13,10 +13,6 @@
 
 - Ruby
 
-## Live Demo
-
-[Live Demo Link]()
-
 ## Getting Started:
 
 To access and change the code on your computer (using GIT):
