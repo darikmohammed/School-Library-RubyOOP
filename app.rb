@@ -1,14 +1,16 @@
 # APP class
-class APP
+module App
   def list_books(books)
     if books.empty?
       puts 'NO BOOKS REGISTERED!'
-      puts ' ================================== '
+      puts '================================== '
+      puts
     else
       books.each do |book|
         puts "TITLE: #{book.title}"
-        puts " AUTHOR #{book.author}"
-        puts ' ================================== '
+        puts "AUTHOR #{book.author}"
+        puts '================================== '
+        puts
       end
     end
   end
@@ -21,21 +23,24 @@ class APP
         puts "ID: #{people.id}"
         puts "NAME:  #{people.name}"
         puts "AGE: #{people.age}"
-        puts ' ================================== '
+        puts '=================================='
+        puts
       end
     end
   end
 
-  def list_rentals(rentals)
+  def list_rentals(rentals, name)
     if rentals.empty?
-      puts 'NO RENTALS REGISTERED!'
-      puts ' ================================== '
+      puts "NO RENTALS REGISTERED FOR PERSON #{name}!"
+      puts ' =================================='
     else
+      puts 'Registered Rentals: '
       rentals.each do |rental|
+        next if rental.person.name != name
+
         puts "DATE: #{rental.date}"
-        puts "BOOK: #{rental.book}"
-        puts "PERSON: #{rental.person}"
-        puts ' ================================== ' \
+        puts rental.rentals
+        puts ' =================================='
       end
     end
   end
