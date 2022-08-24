@@ -1,4 +1,4 @@
-require './rental.rb'
+require './rental'
 
 # Books class
 class Books

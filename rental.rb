@@ -10,7 +10,7 @@ class Rental
     person.rentals.push(self)
   end
 
-  def rentals 
+  def rentals
     "#{@book.title}: #{@person.name} #{@date}"
   end
 end
