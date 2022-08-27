@@ -121,7 +121,7 @@ class Main
     create_book(@books, Books.new(title, author))
     puts "Book has been sucessfully created! \n\n"
   end
-
+  # bug introduced
   def rental_add
     puts 'Adding Book Rental...'
     if @books.empty?
