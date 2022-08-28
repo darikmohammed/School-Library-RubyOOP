@@ -3,6 +3,7 @@ require './student'
 require './teacher'
 require './books'
 require './rental'
+require 'pry'
 
 class Main
   include App
